@@ -1,0 +1,114 @@
+.earth {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+}
+
+.earth-title {
+  width: 80%;
+  text-align: center;
+}
+
+.earth-img {
+  width: 777px;
+}
+
+.earth-cards {
+  display: flex;
+  gap: 10px;
+  transform: translateY(-100px);
+}
+
+.earth-card {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 34px;
+  padding: 25px;
+  width: 418px;
+}
+
+.earth-coutn {
+  font-size: 70px;
+  font-weight: 600;
+  color: #1b1b1b;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+  .earth-card {
+    width: 350px;
+  }
+  .earth-coutn {
+    font-size: 54px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .earth-card {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .earth-title {
+    width: 90%;
+  }
+  .earth-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .earth-card {
+    width: 275px;
+  }
+  .earth-card-last {
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .earth {
+    margin-top: 150px;
+  }
+  .earth-img {
+    width: 500px;
+  }
+
+  .earth-title {
+    width: 100%;
+    text-align: left;
+  }
+  .earth-card,
+  .earth-card-last {
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .earth-img {
+    width: 380px;
+  }
+
+  .earth-card,
+  .earth-card-last {
+    width: 320px;
+    text-align: left;
+  }
+  .earth-coutn {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .earth-img {
+    width: 360px;
+  }
+  .earth-card,
+  .earth-card-last {
+    width: 280px;
+    text-align: center;
+  }
+}

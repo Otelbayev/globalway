@@ -1,0 +1,57 @@
+.forma {
+  display: flex;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 40px;
+  margin: 10px 0;
+  gap: 60px;
+}
+
+.forma-left {
+  flex: 1;
+}
+
+.forma-desc {
+  margin-top: 15px;
+}
+
+.forma-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.forma-right input,
+textarea {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f4f6;
+  border-radius: 18px;
+  color: #808080;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 960px) {
+  .forma {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 360px) {
+}
