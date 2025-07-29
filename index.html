@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Доставка сборных и коммерческих грузов по всей России</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/why.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <link rel="icon" href="./assets/logo.png" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="nav-desktop">
+          <ul class="nav-list">
+            <li><a href="/" data-aos="zoom-in" class="logo">GLOBALWAY</a></li>
+            <li class="md-none">
+              <a data-aos="zoom-in" class="link h-link" href="#whyweare"
+                >Почему мы?</a
+              >
+            </li>
+            <li class="lg-none">
+              <a data-aos="zoom-in" class="link h-link">Услуги</a>
+            </li>
+            <li class="sm-none">
+              <a data-aos="zoom-in" class="link h-link">Курсы</a>
+            </li>
+            <li class="sm-none">
+              <a
+                data-aos="zoom-in"
+                class="link h-link"
+                href="./pages/aboutus.html"
+                >О компании</a
+              >
+            </li>
+            <li class="lg-none">
+              <a data-aos="zoom-in" class="link h-link" href="#faq"> FAQ</a>
+            </li>
+            <li class="md-none-call">
+              <a data-aos="zoom-in" class="link call">Обратный звонок</a>
+            </li>
+            <li class="sm-none">
+              <a
+                data-aos="zoom-in"
+                class="link h-link"
+                href="./pages/contacts.html"
+                >Контакты</a
+              >
+            </li>
+            <li class="menu-btn">
+              <button onclick="openMenu()" data-aos="zoom-in">
+                <img src="./assets/menu.svg" alt="menu" />
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div onclick="closeBg()" class="bg-dark"></div>
+        <nav class="nav-mobile">
+          <div class="nav-close">
+            <button class="close" onclick="closeBg()">
+              <img src="./assets/close.svg" alt="" />
+            </button>
+          </div>
+          <div class="mobile-content">
+            <div class="mobile-nav">
+              <a href="/" class="mobile-logo">GLOBALWAY</a>
+              <ul class="mobile-list">
+                <li>
+                  <a href="#whyweare" onclick="closeBg()" class="mobile-link"
+                    >Почему мы?</a
+                  >
+                </li>
+                <li><a class="mobile-link">Услуги</a></li>
+                <li><a class="mobile-link">Курсы</a></li>
+                <li>
+                  <a href="./pages/aboutus.html" class="mobile-link"
+                    >О компании</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-link" onclick="closeBg()" href="#faq">FAQ</a>
+                </li>
+                <li>
+                  <a href="./pages/contacts.html" class="mobile-link"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <a class="mobile-call">Обратный звонок</a>
+          </div>
+        </nav>
+      </header>
+      <div class="hero">
+        <img
+          data-aos="zoom-in"
+          src="./assets/hero.png"
+          alt=""
+          class="hero-img"
+        />
+        <h1 data-aos="fade-up" class="hero-title">
+          Перевозка сборных и коммерческих грузов
+          <span class="title-span">по всему континенту</span>
+        </h1>
+        <p data-aos="zoom-in" class="hero-desc desc">
+          6 лет перевозим грузы по всейму континенту для розничных и оптовых
+          клиентов
+        </p>
+        <button data-aos="fade-down" class="hero-btn btn">
+          Рассчитать стоимость
+        </button>
+      </div>
+      <div class="why" id="whyweare">
+        <div class="why-left">
+          <p data-aos="fade-up" class="why-title title">
+            Почему ТЛК «GLOBALWAY» —лучшее решение в сфере грузоперевозок?
+          </p>
+          <div data-aos="zoom-in" data-aos="fade-up" class="why-card">
+            <img class="why-card-img" src="./assets/4.png" alt="" />
+            <div class="why-card-title min-title">
+              <div>Быстрый</div>
+              <div>документооборот</div>
+            </div>
+            <div class="why-card-desc min-desc">
+              Оптимизированные процессы позволяют оперативно совершать любые
+              операции
+            </div>
+          </div>
+        </div>
+        <div class="why-right">
+          <div data-aos="fade-up" class="why-card">
+            <img class="why-card-img" src="./assets/1.png" alt="" />
+            <div class="why-card-title min-title">
+              Контроль посылки на всех этапах
+            </div>
+            <div class="why-card-desc min-desc">
+              Уделяем пристальное внимание каждой посылке
+            </div>
+          </div>
+          <div data-aos="fade-up" class="why-card">
+            <img class="why-card-img" src="./assets/2.png" alt="" />
+            <div class="why-card-title min-title">
+              Конкурентное ценообрзование
+            </div>
+            <div class="why-card-desc min-desc">
+              Доступные цена на услуги не на словах, а на деле
+            </div>
+          </div>
+          <div data-aos="zoom-in" class="why-card">
+            <img class="why-card-img" src="./assets/3.png" alt="" />
+            <div class="why-card-title min-title">
+              Большой опыт грузоперевозок
+            </div>
+            <div class="why-card-desc min-desc">
+              Больше 7 лет на рынке грузоперевозок
+            </div>
+          </div>
+          <div data-aos="zoom-in" class="why-card">
+            <img class="why-card-img" src="./assets/5.png" alt="" />
+            <div class="why-card-title min-title">Оперативная коммуникация</div>
+            <div class="why-card-desc min-desc">
+              Наши менеджеры на связи 24 часа в сутки, 7 дней в неделю
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer" id="faq" data-aos="fade-up">
+        <div class="footer-first">
+          <div class="footer-logo">GLOBALWAY</div>
+          <p class="footer-desc">ООО GLOBAL LEARNING SYSTEMS</p>
+          <p class="footer-desc">ИНН 312180973</p>
+          <p class="footer-link link1">Политика конфиденциальности</p>
+        </div>
+        <div class="footer-second">
+          <div>
+            <a class="footer-tel" href="tel:+998977779275"
+              >+998 (97) 777 92-75</a
+            >
+            <p class="footer-desc">Звонок бесплатный и круглосуточный</p>
+          </div>
+          <div>
+            <a class="footer-tel" href="mailto:info@globalway.uz"
+              >info@globalway.uz</a
+            >
+            <p class="footer-desc">Для вопросов и предложений</p>
+          </div>
+          <p class="footer-link link2">Публичная оферта</p>
+        </div>
+        <div class="footer-thrid">
+          <ul>
+            <li>
+              <a>Услуги</a>
+            </li>
+            <li>
+              <a>Курсы</a>
+            </li>
+            <li>
+              <a href="#whyweare">Почему мы</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#faq">FAQ</a>
+            </li>
+            <li>
+              <a href="./pages/contacts.html">Контакты</a>
+            </li>
+            <li>
+              <a href="./pages/aboutus.html">О компании</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      AOS.init({
+        duration: 700,
+      });
+    </script>
+  </body>
+</html>
