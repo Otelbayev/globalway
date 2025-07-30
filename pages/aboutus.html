@@ -20,6 +20,10 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
     <link rel="icon" href="../assets/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -141,7 +145,7 @@
             rows="4"
           ></textarea>
           <input type="text" placeholder="Ваше имя" />
-          <input type="tel" placeholder="(999) 999-99-99" />
+          <input type="tel" style="width: 100%" id="phone" />
           <button class="btn">Отправить</button>
         </form>
       </div>
@@ -251,6 +255,51 @@
     </div>
     <script src="../index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
+
+    <script>
+      const input = document.querySelector("#phone");
+
+      const iti = window.intlTelInput(input, {
+        initialCountry: "uz",
+        preferredCountries: ["uz", "ru", "us", "gb", "tr"],
+        separateDialCode: true,
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+      });
+
+      let cleaveInstance = null;
+
+      function applyMaskFromPlaceholder() {
+        const placeholder = input.getAttribute("placeholder");
+        const digitCount = placeholder.replace(/\D/g, "").length;
+
+        const mask = placeholder.replace(/\d/g, "0");
+
+        if (cleaveInstance) {
+          cleaveInstance.destroy();
+        }
+
+        cleaveInstance = new Cleave(input, {
+          delimiters: mask.match(/[^0]/g),
+          blocks: mask.split(/[^0]/).map((block) => block.length),
+          numericOnly: true,
+        });
+      }
+
+      window.addEventListener("load", applyMaskFromPlaceholder);
+
+      input.addEventListener("countrychange", () => {
+        input.value = "";
+        setTimeout(() => {
+          applyMaskFromPlaceholder();
+        }, 100);
+      });
+    </script>
+
     <script>
       AOS.init({
         duration: 900,
