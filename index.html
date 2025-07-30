@@ -535,18 +535,15 @@
       let cleaveInstance = null;
 
       function applyMaskFromPlaceholder() {
-        const placeholder = input.getAttribute("placeholder"); // masalan: 201-555-0123
+        const placeholder = input.getAttribute("placeholder");
         const digitCount = placeholder.replace(/\D/g, "").length;
 
-        // raqam formatiga mos mask hosil qilamiz (faqat sonlar o‘rni uchun)
-        const mask = placeholder.replace(/\d/g, "0"); // 000-000-0000
+        const mask = placeholder.replace(/\d/g, "0");
 
-        // eski cleave ni tozalash
         if (cleaveInstance) {
           cleaveInstance.destroy();
         }
 
-        // Cleave bilan yangi mask o‘rnatish
         cleaveInstance = new Cleave(input, {
           delimiters: mask.match(/[^0]/g),
           blocks: mask.split(/[^0]/).map((block) => block.length),
@@ -554,15 +551,13 @@
         });
       }
 
-      // Dastlabki holatda mask qo‘shish
       window.addEventListener("load", applyMaskFromPlaceholder);
 
-      // Har safar country o‘zgarsa - mask yangilanadi
       input.addEventListener("countrychange", () => {
         input.value = "";
         setTimeout(() => {
           applyMaskFromPlaceholder();
-        }, 100); // placeholder yangilanishini kutamiz
+        }, 100);
       });
     </script>
 
