@@ -519,8 +519,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
-
     <script>
       const input = document.querySelector("#phone");
 
@@ -532,16 +530,6 @@
           "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
         autoPlaceholder: "polite",
         nationalMode: false,
-      });
-
-      let cleave = new Cleave(input, {
-        phone: true,
-        phoneRegionCode: iti.getSelectedCountryData().iso2,
-      });
-
-      input.addEventListener("countrychange", function () {
-        cleave.setPhoneRegionCode(iti.getSelectedCountryData().iso2);
-        cleave.setRawValue("");
       });
     </script>
 
