@@ -41,7 +41,9 @@
               >
             </li>
             <li class="lg-none">
-              <a data-aos="zoom-in" class="link h-link">Услуги</a>
+              <a data-aos="zoom-in" href="#services" class="link h-link"
+                >Услуги</a
+              >
             </li>
             <li class="sm-none">
               <a data-aos="zoom-in" class="link h-link">Курсы</a>
@@ -91,7 +93,11 @@
                     >Почему мы?</a
                   >
                 </li>
-                <li><a class="mobile-link">Услуги</a></li>
+                <li>
+                  <a class="mobile-link" onclick="closeBg()" href="#services">
+                    Услуги</a
+                  >
+                </li>
                 <li><a class="mobile-link">Курсы</a></li>
                 <li>
                   <a href="./pages/aboutus.html" class="mobile-link"
@@ -112,6 +118,7 @@
           </div>
         </nav>
       </header>
+
       <div class="hero">
         <img
           data-aos="zoom-in"
@@ -131,6 +138,7 @@
           Рассчитать стоимость
         </button>
       </div>
+
       <div class="why" id="whyweare">
         <div class="why-left">
           <p data-aos="fade-up" class="why-title title">
@@ -185,7 +193,6 @@
           </div>
         </div>
       </div>
-
       <div class="forma">
         <div class="forma-left" data-aos="fade-right">
           <div class="title forma-title">
@@ -283,7 +290,7 @@
         </div>
       </div>
 
-      <div class="services">
+      <div id="services" class="services">
         <p data-aos="fade-right" class="title services-title">
           <span>Оказываем</span><span> широкий спектр</span>
           <span>дополнительных услуг</span>
@@ -367,51 +374,131 @@
         <img src="./assets/map.png" class="delivery-img" alt="" />
       </div>
 
-      <footer class="footer" id="faq" data-aos="fade-up">
-        <div class="footer-first">
-          <div class="footer-logo">GLOBALWAY</div>
-          <p class="footer-desc">ООО GLOBAL LEARNING SYSTEMS</p>
-          <p class="footer-desc">ИНН 312180973</p>
-          <p class="footer-link link1">Политика конфиденциальности</p>
-        </div>
-        <div class="footer-second">
-          <div>
-            <a class="footer-tel" href="tel:+998977779275"
-              >+998 (97) 777 92-75</a
-            >
-            <p class="footer-desc">Звонок бесплатный и круглосуточный</p>
+      <div class="banner">
+        <p data-aos="fade-right" class="banner-title title">
+          <span>Сделаем расчёт</span> <span>за 60 секунд</span>
+          <span>прямо сейчас!</span>
+        </p>
+        <p data-aos="fade-right" class="banner-desc desc">
+          <span>Заполните форму и получите</span>
+          <span>расчёт совершенно бесплатно</span>
+        </p>
+        <button data-aos="fade-right" class="banner-btn btn">
+          Сделать расчёт
+        </button>
+        <img
+          data-aos="zoom-in"
+          src="./assets/load.png"
+          class="banner-img desk"
+          alt=""
+        />
+        <img
+          data-aos="zoom-in"
+          src="./assets/load1.png"
+          class="banner-img mob"
+          alt=""
+        />
+      </div>
+      <footer>
+        <div class="footer">
+          <div class="footer-one" data-aos="fade-up">
+            <div class="one-top">
+              <div class="footer-logo">GLOBALWAY</div>
+              <div class="footer-info">ООО GLOBAL LEARNING SYSTEMS</div>
+              <div class="footer-info">ИНН 312180973</div>
+            </div>
+            <div class="footer-pr">Политика конфиденциальности</div>
           </div>
-          <div>
-            <a class="footer-tel" href="mailto:info@globalway.uz"
-              >info@globalway.uz</a
-            >
-            <p class="footer-desc">Для вопросов и предложений</p>
+
+          <div class="footer-two" data-aos="fade-up">
+            <div class="two-top">
+              <div class="top-block">
+                <a class="footer-tel" href="tel:+998977779275"
+                  >+998 (97) 777 92-75</a
+                >
+                <div class="footer-desc">
+                  Звонок бесплатный и круглосуточный
+                </div>
+              </div>
+              <div class="top-block">
+                <a class="footer-tel" href="mailto:info@globalway.uz"
+                  >info@globalway.uz</a
+                >
+                <div class="footer-desc">Для вопросов и предложений</div>
+              </div>
+            </div>
+            <div class="footer-pr">Публичная оферта</div>
           </div>
-          <p class="footer-link link2">Публичная оферта</p>
+
+          <div class="footer-three" data-aos="fade-up">
+            <ul class="footer-list">
+              <li><a class="footer-a" href="#services">Услуги</a></li>
+              <li><a class="footer-a">Курсы</a></li>
+              <li><a class="footer-a" href="#whyweare">Почему мы</a></li>
+            </ul>
+            <ul class="footer-list">
+              <li><a class="footer-a" href="#faq">FAQ</a></li>
+              <li>
+                <a class="footer-a" href="./pages/contacts.html">Контакты</a>
+              </li>
+              <li>
+                <a class="footer-a" href="./pages/aboutus.html">О компании</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-thrid">
-          <ul>
-            <li>
-              <a>Услуги</a>
-            </li>
-            <li>
-              <a>Курсы</a>
-            </li>
-            <li>
-              <a href="#whyweare">Почему мы</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="#faq">FAQ</a>
-            </li>
-            <li>
-              <a href="./pages/contacts.html">Контакты</a>
-            </li>
-            <li>
-              <a href="./pages/aboutus.html">О компании</a>
-            </li>
-          </ul>
+        <div class="footer-md" data-aos="fade-up">
+          <div class="md-top">
+            <div class="top-left">
+              <div class="footer-logo">GLOBALWAY</div>
+              <div class="top-list">
+                <ul class="footer-list">
+                  <li><a class="footer-a" href="#services">Услуги</a></li>
+                  <li><a class="footer-a">Курсы</a></li>
+                  <li><a class="footer-a" href="#whyweare">Почему мы</a></li>
+                </ul>
+                <ul class="footer-list">
+                  <li><a class="footer-a" href="#faq">FAQ</a></li>
+                  <li>
+                    <a class="footer-a" href="./pages/contacts.html"
+                      >Контакты</a
+                    >
+                  </li>
+                  <li>
+                    <a class="footer-a" href="./pages/aboutus.html"
+                      >О компании</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="top-right">
+              <div class="top-block">
+                <a class="footer-tel" href="tel:+998977779275"
+                  >+998 (97) 777 92-75</a
+                >
+                <div class="footer-desc">
+                  Звонок бесплатный и круглосуточный
+                </div>
+              </div>
+              <div class="top-block">
+                <a class="footer-tel" href="mailto:info@globalway.uz"
+                  >info@globalway.uz</a
+                >
+                <div class="footer-desc">Для вопросов и предложений</div>
+              </div>
+            </div>
+          </div>
+          <div class="md-bottom">
+            <div class="bottom-left">
+              <div class="footer-pr">Политика конфиденциальности</div>
+              <div class="footer-info">ООО GLOBAL LEARNING SYSTEMS</div>
+            </div>
+            <div class="bottom-right">
+              <div class="footer-pr">Публичная оферта</div>
+              <div class="footer-info">ИНН 312180973</div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
@@ -419,9 +506,9 @@
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init();
       AOS.init({
         duration: 700,
+        delay: 200,
       });
     </script>
   </body>

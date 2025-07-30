@@ -34,7 +34,12 @@
               >
             </li>
             <li class="lg-none">
-              <a data-aos="zoom-in" class="link h-link">Услуги</a>
+              <a
+                data-aos="zoom-in"
+                href="../index.html#services"
+                class="link h-link"
+                >Услуги</a
+              >
             </li>
             <li class="sm-none">
               <a data-aos="zoom-in" class="link h-link">Курсы</a>
@@ -80,7 +85,11 @@
                     >Почему мы?</a
                   >
                 </li>
-                <li><a class="mobile-link">Услуги</a></li>
+                <li>
+                  <a href="../index.html#services" class="mobile-link"
+                    >Услуги</a
+                  >
+                </li>
                 <li><a class="mobile-link">Курсы</a></li>
                 <li>
                   <a href="./aboutus.html" class="mobile-link">О компании</a>
@@ -147,7 +156,10 @@
     <script src="../index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        duration: 700,
+        delay: 200,
+      });
     </script>
   </body>
 </html>
