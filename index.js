@@ -3,11 +3,13 @@ let mobile = document.querySelector(".nav-mobile");
 let body = document.querySelector("body");
 
 function openMenu() {
+  document.body.classList.add("no-scroll");
   bg.classList.add("run");
   mobile.classList.add("run-mobile");
 }
 
 function closeBg() {
+  document.body.classList.remove("no-scroll");
   bg.classList.remove("run");
   mobile.classList.remove("run-mobile");
 }
