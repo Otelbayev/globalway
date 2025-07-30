@@ -27,6 +27,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+    />
     <link rel="icon" href="./assets/logo.png" />
   </head>
   <body>
@@ -122,6 +126,7 @@
       <div class="hero">
         <img
           data-aos="zoom-in"
+          data-aos-delay="1000"
           src="./assets/hero.png"
           alt=""
           class="hero-img"
@@ -139,12 +144,12 @@
         </button>
       </div>
 
-      <div class="why" id="whyweare">
+      <div class="why" id="whyweare" data-aos="fade-up">
         <div class="why-left">
-          <p data-aos="fade-up" class="why-title title">
+          <p class="why-title title">
             Почему ТЛК «GLOBALWAY» —лучшее решение в сфере грузоперевозок?
           </p>
-          <div data-aos="zoom-in" data-aos="fade-up" class="why-card">
+          <div data-aos="zoom-in" class="why-card">
             <img class="why-card-img" src="./assets/4.png" alt="" />
             <div class="why-card-title min-title">
               <div>Быстрый</div>
@@ -157,7 +162,7 @@
           </div>
         </div>
         <div class="why-right">
-          <div data-aos="fade-up" class="why-card">
+          <div class="why-card">
             <img class="why-card-img" src="./assets/1.png" alt="" />
             <div class="why-card-title min-title">
               Контроль посылки на всех этапах
@@ -166,7 +171,7 @@
               Уделяем пристальное внимание каждой посылке
             </div>
           </div>
-          <div data-aos="fade-up" class="why-card">
+          <div class="why-card">
             <img class="why-card-img" src="./assets/2.png" alt="" />
             <div class="why-card-title min-title">
               Конкурентное ценообрзование
@@ -210,7 +215,7 @@
             rows="4"
           ></textarea>
           <input type="text" placeholder="Ваше имя" />
-          <input type="tel" placeholder="(999) 999-99-99" />
+          <input style="width: 100%" id="phone" type="tel" />
           <button class="btn">Отправить</button>
         </form>
       </div>
@@ -510,9 +515,39 @@
 
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+
+    <script>
+      const input = document.querySelector("#phone");
+
+      const iti = window.intlTelInput(input, {
+        initialCountry: "uz",
+        preferredCountries: ["uz", "ru", "us", "gb", "tr"],
+        separateDialCode: true,
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+        autoPlaceholder: "polite",
+        nationalMode: false,
+      });
+
+      let cleave = new Cleave(input, {
+        phone: true,
+        phoneRegionCode: iti.getSelectedCountryData().iso2,
+      });
+
+      input.addEventListener("countrychange", function () {
+        cleave.setPhoneRegionCode(iti.getSelectedCountryData().iso2);
+        cleave.setRawValue("");
+      });
+    </script>
+
     <script>
       AOS.init({
-        duration: 1000,
+        duration: 900,
         delay: 200,
       });
     </script>

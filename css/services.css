@@ -1,3 +1,7 @@
+.services {
+  padding: 0 20px;
+}
+
 .services-title {
   display: flex;
   flex-direction: column;

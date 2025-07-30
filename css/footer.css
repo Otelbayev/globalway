@@ -9,6 +9,7 @@ footer {
 .footer {
   display: flex;
   gap: 100px;
+  height: 100%;
 }
 
 .footer-one {
@@ -42,6 +43,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .two-top {

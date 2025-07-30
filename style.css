@@ -114,7 +114,7 @@ body {
     max-width: 360px;
   }
   .title {
-    font-size: 34px;
+    font-size: 30px;
   }
 }
 
@@ -122,6 +122,11 @@ body {
   .container {
     max-width: 320px;
   }
+}
+
+.iti__selected-flag {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
 }
 
 /* 
