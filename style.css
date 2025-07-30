@@ -127,6 +127,7 @@ body {
 .iti__selected-flag {
   border-top-left-radius: 18px;
   border-bottom-left-radius: 18px;
+  background-color: #f4f4f6 !important;
 }
 
 /* 

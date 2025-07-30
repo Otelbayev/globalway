@@ -37,6 +37,10 @@
   padding: 0 20px;
 }
 
+.nav-list .call:hover {
+  background-color: #c82333;
+}
+
 .nav-list .h-link:hover {
   background-color: #ececec;
 }
